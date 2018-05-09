@@ -1,8 +1,0 @@
-tutorial git:
-1)git init
-2)git remote add origin LINK DE VUESTRO GIT
-3)git status
-4)git add .
-5)git status
-6)git commit -m "primer commit"
-7)git push origin master 
