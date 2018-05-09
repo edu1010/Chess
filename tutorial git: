@@ -5,4 +5,5 @@ tutorial git:
 4)git add .
 5)git status
 6)git commit -m "primer commit"
-7)git push origin master 
+7)git push origin master  //SI TE SALE ERROR QUE CONTIENE TRABAJO HAZ:git pull origin master
+

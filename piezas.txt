@@ -1,0 +1,4 @@
+jodi- peces i torre
+Jesus- Jugador, alfil i peo
+Eduard- Partida, rei i kvayo
+Xavi-Tablero i dama
