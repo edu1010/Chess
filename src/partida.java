@@ -20,13 +20,12 @@ public class partida {
     }
 
     public static String Email (String email){
-        // compilamos el patron
          Pattern patron;
          //expresio regular treta de: http://librosweb.es/foro/pregunta/228/validando-direcciones-de-email-con-expresiones-regulares/
         patron = Pattern.compile("^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$");
-        // creamos el Matcher a partir del patron, la cadena como parametro
+        // creamos el Matcher a partir del patron
         Matcher encaja = patron.matcher(email);
-        // retornara el email si pasa el patron
+        // retornara el email si pasa el patro
         if (!(encaja.find())){
             return email;
         }else{
@@ -75,13 +74,15 @@ public class partida {
         Jugador jugador1=new Jugador(IntroducirEmail(),IntroducirColor());
         Jugador jugador2=new Jugador(IntroducirEmail(),IntroducirColor());
         Tauler tauler1=new Tauler();
-        tauler1.Tauler();
         String peça;
         String texto;
         int x;
         int y;
-        tauler1.Tauler();
-        while (tauler1.acabarPartida(Rei)!=true){
+        tauler1.imprimirTablero();
+        while (true){
+            if(tauler1.acabarPartida()==true){
+                break;
+            }
             System.out.println("Que peça vol moure");
             peça = reader.readLine();
             System.out.println("Posicio x");
@@ -92,6 +93,7 @@ public class partida {
             y = Integer.parseInt(texto);
             jugador1.cambiarPos(peça,x,y);
             jugador2.cambiarPos(peça,x,y);
+            tauler1.imprimirTablero();
         }
 
 

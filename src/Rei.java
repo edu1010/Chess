@@ -26,7 +26,8 @@ public class Rei extends Peces {
     }
 
     public void setPosicionY(int posicionY) {
-        this.posicionY = posicionY;
+
+	    this.posicionY = posicionY;
     }
 
     public boolean movimentPossible(int posicioX, int posicioY){
