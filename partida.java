@@ -65,7 +65,7 @@ public class partida {
         }
         Jugador jugador1=new Jugador(emailCorrecte,colorCorrecte);
         Jugador jugador2=new Jugador(emailCorrecte,colorCorrecte);
-        tablero tablero1=new tablero();
+        Tauler tauler1=new Tauler();
 
 
 
