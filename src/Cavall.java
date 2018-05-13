@@ -1,10 +1,12 @@
-
-public class Dama extends Peces{
-	public Dama(String color) {
+//Creado por Jordi Casalí
+public class Cavall extends Peces{
+   
+    public Cavall(String color) {
         if (color.equals("blanc") | color.equals("negre")) {
             setColor(color);
         }
-	}
+    }
+   
     public void veureMoviments() {
         for (int i = getX()+1; i < 9 ; i++) {
             System.out.println(i);
@@ -14,5 +16,4 @@ public class Dama extends Peces{
             System.out.println(i);
         }
     }
-	
 }

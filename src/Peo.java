@@ -1,6 +1,6 @@
 
-public class Dama extends Peces{
-	public Dama(String color) {
+public class Peo extends Peces{
+	public Peo(String color) {
         if (color.equals("blanc") | color.equals("negre")) {
             setColor(color);
         }

@@ -2,46 +2,37 @@
 public class Tauler {
 	private int tamany=8;
 	
-	private enum Color{ Blanc("blanc"), Negre("negre");
-		String colors;
-		Color(String colors){
-			this.colors = colors;
-		}
-	}
-	
+	private Peces[][] tauler;
 	private Peces[][] taulerescacs = {
-            { new Torre(Blanc), new Cavall(WHITE), new Alfil(WHITE),
-                new Dama(WHITE), new Rei(WHITE), new Alfil(WHITE),
-                new Cavall(WHITE), new Torre(WHITE) },
-        { new Pawn(WHITE), new Pawn(WHITE), new Pawn(WHITE),
-                new Pawn(WHITE), new Pawn(WHITE), new Pawn(WHITE),
-                new Pawn(WHITE), new Pawn(WHITE) },
-        { null, null, null, null, null, null, null, null },
-        { null, null, null, null, null, null, null, null },
-        { null, null, null, null, null, null, null, null },
-        { null, null, null, null, null, null, null, null },
-        { new Pawn(BLACK), new Pawn(BLACK), new Pawn(BLACK),
-                new Pawn(BLACK), new Pawn(BLACK), new Pawn(BLACK),
-                new Pawn(BLACK), new Pawn(BLACK) },
-        { new Rook(BLACK), new Cavall(BLACK), new Alfil(BLACK),
-                new Dama(BLACK), new Rei(BLACK), new Alfil(BLACK),
-                new Cavall(BLACK), new Torre(BLACK) } };
-	};
+            { new Torre("blanc"), new Cavall("blanc"), new Alfil("blanc"),new Dama("blanc"), new Rei("blanc"), new Alfil("blanc"), new Cavall("blanc"), new Torre("blanc") },
+            { new Peo("blanc"), new Peo("blanc"), new Peo("blanc"),new Peo("blanc"), new Peo("blanc"), new Peo("blanc"),new Peo("blanc"), new Peo("blanc") },
+            { null, null, null, null, null, null, null, null },
+            { null, null, null, null, null, null, null, null },
+            { null, null, null, null, null, null, null, null },
+            { null, null, null, null, null, null, null, null },
+            { new Peo("negre"), new Peo("negre"), new Peo("negre"),new Peo("negre"), new Peo("negre"), new Peo("negre"),new Peo("negre"), new Peo("negre") },
+            { new Torre("negre"), new Cavall("negre"), new Alfil("negre"), new Dama("negre"), new Rei("negre"), new Alfil("negre"), new Cavall("negre"), new Torre("negre") } };
 	
 	public Tauler() {
-		for (int i=0;i<x;i++) {
-			for(int j=0;j<y;j++) {
-				
-			}
-		}
+		this.tauler=taulerescacs;
 	}
 	
 	private String detectarGuanyador() {
+		if (Rei("blanc")==null) {
+			return "negre";
+		}
+		else {
 		return "blanc";
+		}
 	}
 	
-	private boolean acabarPartida() {
-		return true;
+	private boolean acabarPartida(Peces Rei) {
+		if (Rei == null) {
+			return false;
+		}
+		else {
+			return true;
+		}
 	}
 	
 	public boolean torn() {

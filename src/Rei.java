@@ -1,7 +1,14 @@
-public class rei /*extends peces*/ {
+public class Rei extends Peces {
     private int posicionX;
     private int posicionY;
-    public rei(int posicionX, int posicionY) {
+    
+	public Rei(String color) {
+        if (color.equals("blanc") | color.equals("negre")) {
+            setColor(color);
+        }
+	}
+    
+    public Rei(int posicionX, int posicionY) {
         cambiarPos(posicionX,posicionY);
  }
 
