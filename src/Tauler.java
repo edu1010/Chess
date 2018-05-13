@@ -3,7 +3,7 @@ public class Tauler {
 	private int tamany=8;
 	
 	private Peces[][] tauler;
-	private Peces[][] taulerescacs = {
+	private static Peces[][] taulerescacs = {
             { new Torre("blanc"), new Cavall("blanc"), new Alfil("blanc"),new Dama("blanc"), new Rei("blanc"), new Alfil("blanc"), new Cavall("blanc"), new Torre("blanc") },
             { new Peo("blanc"), new Peo("blanc"), new Peo("blanc"),new Peo("blanc"), new Peo("blanc"), new Peo("blanc"),new Peo("blanc"), new Peo("blanc") },
             { null, null, null, null, null, null, null, null },
@@ -39,6 +39,13 @@ public class Tauler {
 	
 	public boolean torn() {
 		return true;
+	}
+	
+	public static void main() {
+		for (int i=0;i<taulerescacs.length;i++) {
+			for (int j=0;j<taulerescacs[i].length;j++)
+				System.out.println(taulerescacs[i][j]);
+		}
 	}
 	
 }
