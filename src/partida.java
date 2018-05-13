@@ -35,23 +35,22 @@ public class partida {
     public static String IntroducirColor()throws IOException{
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String color;
+        System.out.println("Introduce el color");
         color = reader.readLine();
         //Comprobacio per garantizar que sigui un color valid
         String colorCorrecte=comprovarColorPeça(color);
-        while(true){
-            if(!(colorCorrecte.equals("Color no valid"))){
-                break;
-            }else{
-                System.out.println("Color no valido, vulva a introducirlo");
-                color = reader.readLine();
-                colorCorrecte=comprovarColorPeça(color);
-            }
+        while(colorCorrecte.equals("Color no valid")){
+            System.out.println("Color no valido, vulva a introducirlo");
+            color = reader.readLine();
+            colorCorrecte=comprovarColorPeça(color);
+
         }
         return colorCorrecte;
     }
     public static String IntroducirEmail()throws IOException{
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String email;
+        System.out.println("Introduce tu email");
         email = reader.readLine();
         //Comprobacio per garantizar que sigui un email valid
         String emailCorrecte=Email(email);
