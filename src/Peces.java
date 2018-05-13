@@ -1,5 +1,5 @@
 //Creado por Jordi Casalí
-public class Peces {
+public class Peces  {
     private String color;
     private int x;
     private int y;

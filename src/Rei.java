@@ -1,3 +1,4 @@
+//Creado por Eduard Corral
 public class Rei extends Peces {
     private int posicionX;
     private int posicionY;
@@ -32,7 +33,6 @@ public class Rei extends Peces {
         int xActual=getPosicionX();
         int yActual=getPosicionY();
         if((xActual+1==posicioX && yActual==posicioY && posicioX<=8 && posicioY<=8 )||(xActual-1==posicioX && yActual==posicioY && posicioX<=8 && posicioY<=8)||(yActual+1==posicioY && xActual==posicioX && posicioX<=8 && posicioY<=8)||(yActual-1==posicioY && posicioX==xActual && posicioX<=8 && posicioY<=8)||(yActual+1==posicioY && (xActual+1==posicioX ||xActual-1==posicioX)&& posicioX<=8 && posicioY<=8)||(yActual-1==posicioY &&(xActual+1==posicioX ||xActual-1==posicioX)&& posicioX<=8 && posicioY<=8 )){
-            //getPosicionTablero(posicioX,posicioY)
             return true;
         }else {
             return false;

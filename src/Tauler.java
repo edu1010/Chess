@@ -16,7 +16,12 @@ public class Tauler {
 	public Tauler() {
 		this.tauler=taulerescacs;
 	}
-	
+
+	@Override
+	public String toString() {
+		return super.toString();
+	}
+
 	/**
 	private String detectarGuanyador() {
 		*if (Rei("blanc")==null) {
@@ -27,8 +32,8 @@ public class Tauler {
 		}
 	}
 	*/
-	
-	private boolean acabarPartida(Peces Rei) {
+
+	public boolean acabarPartida(Peces Rei) {
 		if (Rei == null) {
 			return false;
 		}

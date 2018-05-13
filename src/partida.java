@@ -1,3 +1,4 @@
+//Creado por Eduard Corral
 import java.io.*;
 import java.util.regex.*;
 
@@ -25,7 +26,7 @@ public class partida {
         patron = Pattern.compile("^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$");
         // creamos el Matcher a partir del patron, la cadena como parametro
         Matcher encaja = patron.matcher(email);
-        // invocamos el metodo replaceAll
+        // retornara el email si pasa el patron
         if (!(encaja.find())){
             return email;
         }else{
@@ -67,13 +68,31 @@ public class partida {
     }
 
     public static void main(String[] args)throws IOException {
-
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
 
 
         Jugador jugador1=new Jugador(IntroducirEmail(),IntroducirColor());
         Jugador jugador2=new Jugador(IntroducirEmail(),IntroducirColor());
-        Tauler tablero1=new Tauler();
+        Tauler tauler1=new Tauler();
+        tauler1.Tauler();
+        String peça;
+        String texto;
+        int x;
+        int y;
+        tauler1.Tauler();
+        while (tauler1.acabarPartida(Rei)!=true){
+            System.out.println("Que peça vol moure");
+            peça = reader.readLine();
+            System.out.println("Posicio x");
+            texto= reader.readLine();
+            x = Integer.parseInt(texto);
+            System.out.println("Posicio y");
+            texto= reader.readLine();
+            y = Integer.parseInt(texto);
+            jugador1.cambiarPos(peça,x,y);
+            jugador2.cambiarPos(peça,x,y);
+        }
 
 
 

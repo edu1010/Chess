@@ -1,6 +1,7 @@
-//Creado por Jordi Casalí
+//Creado por Eduard Corral
 public class Cavall extends Peces{
-   
+    private int posicionX;
+    private int posicionY;
     public Cavall(String color) {
         if (color.equals("blanc") | color.equals("negre")) {
             setColor(color);
