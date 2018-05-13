@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.regex.*;
 
-public class partida {
+public class Partida {
     public static String  comprovarColorPeça(String color){
         String colorDevolver="";
             if (color.equalsIgnoreCase("blanc")) {

@@ -1,7 +1,9 @@
 public class Cavall /*extends peces*/ {
     private int posicionX;
     private int posicionY;
-    public Cavall(int posicionX, int posicionY) {
+    private String color;
+
+    public Cavall(String color,int posicionX, int posicionY) {
         cambiarPos(posicionX,posicionY);
     }
 
@@ -24,7 +26,7 @@ public class Cavall /*extends peces*/ {
     public boolean movimentPossible(int posicioX, int posicioY){
         int xActual=getPosicionX();
         int yActual=getPosicionY();
-        if(){
+        if(true){
             //getPosicionTablero(posicioX,posicioY)
             return true;
         }else {
