@@ -31,27 +31,11 @@ public class partida {
         }else{
             return ("Email no valido");
         }
-
-
     }
-
-    public static void main(String[] args)throws IOException {
+    public static String IntroducirColor()throws IOException{
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String color;
         color = reader.readLine();
-        String email;
-        email = reader.readLine();
-        //Comprobacio per garantizar que sigui un email valid
-        String emailCorrecte=Email(email);
-        while(true){
-            if(!(emailCorrecte.equals("Email no valido"))){
-                break;
-            }else{
-                System.out.println("Email incorrecto, introduce un email correcto");
-                email = reader.readLine();
-                emailCorrecte=Email(email);
-                }
-        }
         //Comprobacio per garantizar que sigui un color valid
         String colorCorrecte=comprovarColorPeça(color);
         while(true){
@@ -63,8 +47,33 @@ public class partida {
                 colorCorrecte=comprovarColorPeça(color);
             }
         }
-        Jugador jugador1=new Jugador(emailCorrecte,colorCorrecte);
-        Jugador jugador2=new Jugador(emailCorrecte,colorCorrecte);
+        return colorCorrecte;
+    }
+    public static String IntroducirEmail()throws IOException{
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String email;
+        email = reader.readLine();
+        //Comprobacio per garantizar que sigui un email valid
+        String emailCorrecte=Email(email);
+        while(true){
+            if(!(emailCorrecte.equals("Email no valido"))){
+                break;
+            }else{
+                System.out.println("Email incorrecto, introduce un email correcto");
+                email = reader.readLine();
+                emailCorrecte=Email(email);
+            }
+        }
+        return emailCorrecte;
+    }
+
+    public static void main(String[] args)throws IOException {
+
+
+
+
+        Jugador jugador1=new Jugador(IntroducirEmail(),IntroducirColor());
+        Jugador jugador2=new Jugador(IntroducirEmail(),IntroducirColor());
         Tauler tablero1=new Tauler();
 
 
