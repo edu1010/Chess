@@ -70,7 +70,7 @@ public class Jugador {
 	}
 	
 	public String ComprobarPeça(String Peça) {
-		if (Peça.equalsIgnoreCase("rei")) {
+		if (Peça.equalsIgnoreCase("Rei")) {
 			return "Rei";
 		}
 		

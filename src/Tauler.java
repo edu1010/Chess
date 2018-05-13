@@ -17,14 +17,16 @@ public class Tauler {
 		this.tauler=taulerescacs;
 	}
 	
+	/**
 	private String detectarGuanyador() {
-		if (Rei("blanc")==null) {
+		*if (Rei("blanc")==null) {
 			return "negre";
 		}
 		else {
 		return "blanc";
 		}
 	}
+	*/
 	
 	private boolean acabarPartida(Peces Rei) {
 		if (Rei == null) {
