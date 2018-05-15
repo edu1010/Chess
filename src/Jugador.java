@@ -97,7 +97,8 @@ public class Jugador {
 		return Peça;
 	}
 	
-	public void cambiarPos(String Peça,int x,int y) {
+	public void
+	biarPos(String Peça,int x,int y) {
 		
 	}
 	

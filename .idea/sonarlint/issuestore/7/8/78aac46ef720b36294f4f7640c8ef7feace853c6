@@ -1,0 +1,8 @@
+
+.squid:S2178"Correct this "|" to "||".(ÊÿÈß
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(‡¥à‰
+[squid:S1126"AReplace this if-then-else statement by a single return statement.(ëûó£ùÿÿÿÿ
+Bsquid:S1125"(Remove the literal "true" boolean value.(á¨÷˜ýÿÿÿÿ
+1squid:S1220""Move this file to a named package.
+fsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(Å¦Ûe

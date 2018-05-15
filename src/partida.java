@@ -21,12 +21,14 @@ public class partida {
 
     public static String Email (String email){
          Pattern patron;
+         boolean x;
          //expresio regular treta de: http://librosweb.es/foro/pregunta/228/validando-direcciones-de-email-con-expresiones-regulares/
-        patron = Pattern.compile("^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$");
+        patron = Pattern.compile("^[a-z0-9]+(.[a-z0-9]+)*@[a-z0-9]+(.[a-z0-9]+)*(.[a-z]{2,4})$");
         // creamos el Matcher a partir del patron
         Matcher encaja = patron.matcher(email);
+        x = encaja.matches();
         // retornara el email si pasa el patro
-        if (!(encaja.find())){
+        if (x){
             return email;
         }else{
             return ("Email no valido");
@@ -54,6 +56,7 @@ public class partida {
         email = reader.readLine();
         //Comprobacio per garantizar que sigui un email valid
         String emailCorrecte=Email(email);
+        System.out.println(emailCorrecte);
         while(true){
             if(!(emailCorrecte.equals("Email no valido"))){
                 break;
@@ -79,7 +82,7 @@ public class partida {
         int x;
         int y;
         tauler1.imprimirTablero();
-        while (true){
+       /** while (true){
             if(tauler1.acabarPartida()==true){
                 break;
             }
@@ -94,7 +97,7 @@ public class partida {
             jugador1.cambiarPos(peça,x,y);
             jugador2.cambiarPos(peça,x,y);
             tauler1.imprimirTablero();
-        }
+        }**/
 
 
 
