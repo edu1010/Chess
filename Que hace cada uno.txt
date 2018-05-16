@@ -1,4 +1,4 @@
 jordi- peces i torre
 Jesus- Jugador, alfil i peo
-Eduard- Partida, rei i kvayo
+Eduard- Partida, rei i cavall
 Xavi-Tablero i dama

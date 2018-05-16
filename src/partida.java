@@ -82,7 +82,7 @@ public class partida {
         int x;
         int y;
         tauler1.imprimirTablero();
-       /** while (true){
+        /**while (true){
             if(tauler1.acabarPartida()==true){
                 break;
             }
@@ -98,7 +98,7 @@ public class partida {
             jugador2.cambiarPos(peça,x,y);
             tauler1.imprimirTablero();
         }**/
-
+        tauler1.imprimirTablero();
 
 
 
